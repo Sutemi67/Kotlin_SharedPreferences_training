@@ -30,9 +30,10 @@ class MainActivity : AppCompatActivity() {
                 .apply()
             Toast.makeText(this, "Saved ${editText.editableText}", Toast.LENGTH_SHORT).show()
         }
-
-        restoreButton.setOnClickListener{
-            editText.setText(sharedPref.getString(EDIT_TEXT_KEY,""))
+        restoreButton.setOnClickListener {
+            editText.setText(sharedPref.getString(EDIT_TEXT_KEY, ""))
         }
+
+        //доя автоматического сохранения и восстановления нужно перенести функции в метод onCreate
     }
 }
